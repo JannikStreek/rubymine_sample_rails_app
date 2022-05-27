@@ -15,6 +15,10 @@ services:
     volumes:
       - .:/sample_rails_application
       - /sample_rails_application/node_modules
+      - node_modules:/usr/src/app/node_modules
+      - system_bundler_cache:/usr/local/bundle
+      - user_bundler_cache:/home/app/.gem
+      - user_cache:/home/app/.cache
     ports:
       - "3000:3000"
       # Ports required for debugging
@@ -22,3 +26,10 @@ services:
       - "26166:26168"
     depends_on:
       - db
+
+volumes:
+  system_bundler_cache:
+  user_bundler_cache:
+  user_cache:
+  postgres_data:
+  node_modules:

@@ -14,12 +14,12 @@ gem 'sass-rails',                 '6.0.0'
 gem 'webpacker',                  '5.2.1'
 gem 'turbolinks',                 '5.2.1'
 gem 'jbuilder',                   '2.10.0'
-gem 'bootsnap',                   '1.7.2', require: false
+gem 'bootsnap',                   '1.9.3', require: false
 gem 'factory_bot',                '6.1.0'
 gem 'factory_bot_rails',          '6.1.0'
 group :development, :test do
-  # gem 'debase'
-  # gem 'ruby-debug-ide'
+  gem 'debase'
+  gem 'ruby-debug-ide'
   gem 'rspec-rails',        '5.0.1'
   gem 'simplecov',          '0.21.2'
   gem 'sqlite3',            '1.4.2'
